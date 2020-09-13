@@ -1,9 +1,6 @@
 import random
 from unidecode import unidecode
 
-def ger_random():
-    print("Em desenvolvimento.")
-
 def ger_homem():
     qtd = input("QUANTIDADE:")
     qtd = int(qtd)
@@ -156,5 +153,4 @@ def ger_fotos():
        [] Cor do cabelo
        [] Sexo
     ''')
-    parametros_pesquisa = input("Insira os parametros para pesquisa: Exemplo: 30, preto, feminino.")
 
