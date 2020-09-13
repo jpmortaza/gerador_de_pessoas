@@ -7,6 +7,7 @@ Módulos adicionados:
 - [x] Cidade;
 - [x] E-mail;
 - [x] Link da caixa de e-mail;
+- [x] Bio;
 - [ ] Instagram.
 - [ ] Twitter.
 
