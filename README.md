@@ -31,11 +31,3 @@ python index.py
 ```
 
 
-## FOTOS PARA PERFIS
-- https://www.modelmayhem.com/
-- https://purpleport.com/
-
-By JPMortaza
-
-
-
