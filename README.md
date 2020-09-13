@@ -23,10 +23,13 @@ Para adicionar mais dados abra os links e adicione os dados:
 - list_sobrenomes_italianos.txt *sobrenomes italianos, não criado ainda modo de escolha de sobrenomes.
 
 ## INSTALAÇÃO 
--> git clone https://github.com/JPMORTAZA/gerador_de_pessoas.git
--> cd gerador_de_pessoas
--> pip install -r requirements.txt
--> python index.py
+git clone https://github.com/JPMORTAZA/gerador_de_pessoas.git
+cd gerador_de_pessoas
+pip install -r requirements.txt
+python index.py
+
+
+By JPMortaza
 
 
 
