@@ -1,3 +1,14 @@
-# gerador_de_pessoas
+# GERADOR DE PESSOAS
+O script cria dados para perfis em redes sociais.
 
-Crie personas com nome, data de nascimento, e-mail e senha. 
+Módulos adicionados:
+- [x] Nome;
+- [x] Data de nascimento;
+- [x] Cidade;
+- [x] E-mail;
+- [x] Link da caixa de e-mail;
+- [ ] Instagram.
+- [ ] Twitter.
+
+
+Na pasta _listas estão os dados para gerar os usuários:
