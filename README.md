@@ -1,5 +1,5 @@
 # GERADOR DE PESSOAS
-O script cria dados para perfis em redes sociais.
+O script gera dados para perfis em redes sociais.
 
 Módulos adicionados:
 - [x] Nome;
