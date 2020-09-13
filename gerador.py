@@ -1,5 +1,6 @@
 import random
-import datetime
+from unidecode import unidecode
+
 def ger_random():
     print("Em desenvolvimento.")
 
@@ -52,11 +53,18 @@ def ger_homem():
         gera_senha = str(gera_senha)
         senha_resul = ano + nome_result + '@' + gera_senha
 
-#SALVA NO ARQUIVO
-        arquivo_nomes.write(nome_result + ' ' + sobrenome_resul + ',' + data_nasc_result + ',' + cidade_result + ',' + senha_resul + '\r\n' )
 
-# -- imprime os nomes gerados - tem que ser as ultimas linhas do arquivo
-        print(nome_result + ' ' + sobrenome_resul + ',' + data_nasc_result + ',' + cidade_result + ',' + senha_resul)
+# E-MAIL
+        link_email = "https://www.invertexto.com/gerador-email-temporario?email="
+        email = unidecode(nome_result + sobrenome_resul + ano + gera_senha + '@uorak.com')
+        email_link_result = link_email + email.replace(" ", "")
+
+# SALVA NO ARQUIVO
+        arquivo_nomes.write(
+            nome_result + ' ' + sobrenome_resul + ',' + data_nasc_result + ',' + cidade_result + ',' + senha_resul + ',' + email_link_result + '\r\n')
+
+#IMPRIME OS DADOS GERADOS
+        print(nome_result + ' ' + sobrenome_resul + ',' + data_nasc_result + ',' + cidade_result + ',' + senha_resul + ',' + email_link_result)
         impresso = impresso + 1
 
     else:
@@ -115,13 +123,26 @@ def ger_mulher():
         gera_senha = str(gera_senha)
         senha_resul = ano + nome_result + '@' + gera_senha
 
-#SALVA NO ARQUIVO
-        arquivo_nomes.write(nome_result + ' ' + sobrenome_resul + ',' + data_nasc_result + ',' + cidade_result + ',' + senha_resul + '\r\n' )
+#E-MAIL
+        arquivo_email = open('_listas/list_e-mail.txt', 'r')
+        email = []
+        for email_linha in arquivo_email:
+            email_linha = email_linha.strip()
+            email.append(email_linha)
+            email_numero = random.randrange(0, len(email))
+            link_email = "https://generator.email/"
+            email_resul = email[email_numero]
+            email_email = unidecode(nome_result + sobrenome_resul + ano + email_resul)
+            email_link_result = link_email + email_email.replace(" ", "")  # link do email
 
-# -- imprime os nomes gerados - tem que ser as ultimas linhas do arquivo
-        print(nome_result + ' ' + sobrenome_resul + ',' + data_nasc_result + ',' + cidade_result + ',' + senha_resul)
+#SALVA NO ARQUIVO
+        arquivo_nomes.write(nome_result + ' ' + sobrenome_resul + ',' + data_nasc_result + ',' + cidade_result + ',' + senha_resul + ',' + email_email + ',' + email_link_result + '\r\n' )
+
+        # -- imprime os nomes gerados - tem que ser as ultimas linhas do arquivo
+        print(nome_result + ' ' + sobrenome_resul + ',' + data_nasc_result + ',' + cidade_result + ',' + senha_resul + ',' + email_email + ',' + email_link_result)
         impresso = impresso + 1
 
+#FINAL
     else:
         print("*** NOMES GERADOS ***")
 
