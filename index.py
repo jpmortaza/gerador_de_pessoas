@@ -10,7 +10,7 @@ print(
 '''
 [ 1 ] - MULHER - NOME SIMPLES
 [ 2 ] - HOMEM - NOME SIMPLES
-[ 3 ] - RANDOM
+[ 3 ] - SAIR
 ''')
 
 escolha = input("DIGITE SUA ESCOLHA:")
@@ -21,14 +21,11 @@ while(escolha != 3):
         print("GERADOR DE MULHERES")
         gerador.ger_mulher()
 
-    else:
+    elif(escolha == 2):
         print("GERADOR DE HOMENS")
         gerador.ger_homem()
         break
-
-
-#IMPLEMENTANDO - [1.5] - MULHER - NOME COMPOSTO, [2.5] - HOMEM - NOME COMPOSTO,
-
-# DESCEDENCIA - SOBRENOMES ITALIANOS
-
-
+print('''
+--- OBRIGADO POR UTILIZAR NOSSO SITEMA --- 
+by JPMortaza
+''')

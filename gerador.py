@@ -4,7 +4,7 @@ from unidecode import unidecode
 def ger_homem():
     qtd = input("QUANTIDADE:")
     qtd = int(qtd)
-    arquivo_nomes = open('resultado.csv', 'a') #CRIA O ARQUIVO
+    arquivo_nomes = open('resultado.txt', 'a') #CRIA O ARQUIVO
     impresso = 1
 
 # SORTEIA UM NOME
@@ -74,7 +74,7 @@ def ger_homem():
 def ger_mulher():
     qtd = input("QUANTIDADE:")
     qtd = int(qtd)
-    arquivo_nomes = open('resultado.csv', 'a') #CRIA O ARQUIVO
+    arquivo_nomes = open('resultado.txt', 'a') #CRIA O ARQUIVO
     impresso = 1
 
 # SORTEIA UM NOME
