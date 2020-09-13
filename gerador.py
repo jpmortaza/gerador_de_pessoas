@@ -50,18 +50,26 @@ def ger_homem():
         gera_senha = str(gera_senha)
         senha_resul = ano + nome_result + '@' + gera_senha
 
-
 # E-MAIL
         link_email = "https://www.invertexto.com/gerador-email-temporario?email="
         email = unidecode(nome_result + sobrenome_resul + ano + gera_senha + '@uorak.com')
         email_link_result = link_email + email.replace(" ", "")
 
+# GERADOR DE BIOS PARA INSTAGRAM E TWITTER
+        arquivo_list_bio = open('_listas/list_bio.txt', 'r')
+        bio = []
+        for bio_linha in arquivo_list_bio:
+            bio_linha = bio_linha.strip()
+            bio.append(bio_linha)
+            numero_bio = random.randrange(0, len(bio))
+            bio_result = bio[numero_bio].title()
+
 # SALVA NO ARQUIVO
         arquivo_nomes.write(
-            nome_result + ' ' + sobrenome_resul + ',' + data_nasc_result + ',' + cidade_result + ',' + senha_resul + ',' + email_link_result + '\r\n')
+            nome_result + ' ' + sobrenome_resul + ';' + data_nasc_result + ';' + cidade_result + ';' + senha_resul + ';' + email_link_result + ';' + email_link_result + ';' + bio_result + '\r\n')
 
 #IMPRIME OS DADOS GERADOS
-        print(nome_result + ' ' + sobrenome_resul + ',' + data_nasc_result + ',' + cidade_result + ',' + senha_resul + ',' + email_link_result)
+       # print(nome_result + ' ' + sobrenome_resul + ',' + data_nasc_result + ',' + cidade_result + ',' + senha_resul + ',' + email_link_result + ',' + bio_result)
         impresso = impresso + 1
 
     else:
@@ -132,11 +140,20 @@ def ger_mulher():
             email_email = unidecode(nome_result + sobrenome_resul + ano + email_resul)
             email_link_result = link_email + email_email.replace(" ", "")  # link do email
 
-#SALVA NO ARQUIVO
-        arquivo_nomes.write(nome_result + ' ' + sobrenome_resul + ',' + data_nasc_result + ',' + cidade_result + ',' + senha_resul + ',' + email_email + ',' + email_link_result + '\r\n' )
+# GERADOR DE BIOS PARA INSTAGRAM E TWITTER
+        arquivo_list_bio = open('_listas/list_bio.txt', 'r')
+        bio = []
+        for bio_linha in arquivo_list_bio:
+            bio_linha = bio_linha.strip()
+            bio.append(bio_linha)
+            numero_bio = random.randrange(0, len(bio))
+            bio_result = bio[numero_bio].title()
 
-        # -- imprime os nomes gerados - tem que ser as ultimas linhas do arquivo
-        print(nome_result + ' ' + sobrenome_resul + ',' + data_nasc_result + ',' + cidade_result + ',' + senha_resul + ',' + email_email + ',' + email_link_result)
+# SALVA NO ARQUIVO
+        arquivo_nomes.write(nome_result + ' ' + sobrenome_resul + ';' + data_nasc_result + ';' + cidade_result + ';' + senha_resul  + ';' + email_link_result + ';' + email_link_result + ';' + bio_result + '\r\n')
+
+# IMPRIME OS DADOS GERADOS
+        # print(nome_result + ' ' + sobrenome_resul + ',' + data_nasc_result + ',' + cidade_result + ',' + senha_resul + ',' + email_link_result + ',' + bio_result)
         impresso = impresso + 1
 
 #FINAL
