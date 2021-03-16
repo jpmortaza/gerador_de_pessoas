@@ -8,7 +8,7 @@ Módulos adicionados:
 - [x] Data de nascimento;
 - [x] Cidade;
 - [x] E-mail;
-- [ ] Senha;
+- [x] Senha;
 - [x] Link da caixa de e-mail;
 - [x] Bio;
 - [ ] Instagram.
