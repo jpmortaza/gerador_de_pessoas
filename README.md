@@ -11,6 +11,7 @@ Módulos adicionados:
 - [x] Senha;
 - [x] Link da caixa de e-mail;
 - [x] Bio;
+- [ ] Profissão;
 - [ ] Instagram.
 - [ ] Twitter.
 
