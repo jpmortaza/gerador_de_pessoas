@@ -4,13 +4,13 @@ from unidecode import unidecode
 def ger_homem():
     qtd = input("QUANTIDADE:")
     qtd = int(qtd)
-    arquivo_nomes = open('resultado.txt', 'a') #CRIA O ARQUIVO
+    arquivo_nomes = open('resultado.txt', 'a', encoding="utf8") #CRIA O ARQUIVO
     impresso = 1
 
 # SORTEIA UM NOME
     while (impresso <= qtd):
 #RANDOM NOME
-        arquivo_list_nome = open('_listas/list_nomes_hom.txt', 'r')
+        arquivo_list_nome = open('_listas/list_nomes_hom.txt', 'r', encoding="utf8")
         nome = []
         for nome_linha in arquivo_list_nome:
             nome_linha = nome_linha.strip()
@@ -19,7 +19,7 @@ def ger_homem():
         nome_result = nome[nome_numero].title()
 
 #SORTEIA UM SOOBRENOME DA LISTA
-        arquivo_sobrenome = open('_listas/list_sobrenomes.txt', 'r')
+        arquivo_sobrenome = open('_listas/list_sobrenomes.txt', 'r', encoding="utf8")
         sobrenome = []
         for sobrenome_linha in arquivo_sobrenome:
             sobrenome_linha = sobrenome_linha.strip()
@@ -28,7 +28,7 @@ def ger_homem():
         sobrenome_resul = sobrenome[sobrenome_numero].title()
 
 # SORTEIA UMA CIDADE
-        arquivo_list_cidades = open('_listas/list_cidades_rs.txt', 'r')
+        arquivo_list_cidades = open('_listas/list_cidades_rs.txt', 'r', encoding="utf8")
         cidade = []
         for cidade_linha in arquivo_list_cidades:
             cidade_linha = cidade_linha.strip()
@@ -56,7 +56,7 @@ def ger_homem():
         email_link_result = link_email + email.replace(" ", "")
 
 # GERADOR DE BIOS PARA INSTAGRAM E TWITTER
-        arquivo_list_bio = open('_listas/list_bio.txt', 'r')
+        arquivo_list_bio = open('_listas/list_bio.txt', 'r',encoding="utf8" )
         bio = []
         for bio_linha in arquivo_list_bio:
             bio_linha = bio_linha.strip()
@@ -82,13 +82,13 @@ def ger_homem():
 def ger_mulher():
     qtd = input("QUANTIDADE:")
     qtd = int(qtd)
-    arquivo_nomes = open('resultado.txt', 'a') #CRIA O ARQUIVO
+    arquivo_nomes = open('resultado.txt', 'a',encoding="utf8" ) #CRIA O ARQUIVO
     impresso = 1
 
 # SORTEIA UM NOME
     while (impresso <= qtd):
 #RANDOM NOME
-        arquivo_list_nome = open('_listas/list_nomes.txt', 'r')
+        arquivo_list_nome = open('_listas/list_nomes.txt', 'r',encoding="utf8" )
         nome = []
         for nome_linha in arquivo_list_nome:
             nome_linha = nome_linha.strip()
@@ -97,7 +97,7 @@ def ger_mulher():
         nome_result = nome[nome_numero].title()
 
 #SORTEIA UM SOOBRENOME DA LISTA
-        arquivo_sobrenome = open('_listas/list_sobrenomes.txt', 'r')
+        arquivo_sobrenome = open('_listas/list_sobrenomes.txt', 'r',encoding="utf8" )
         sobrenome = []
         for sobrenome_linha in arquivo_sobrenome:
             sobrenome_linha = sobrenome_linha.strip()
@@ -106,7 +106,7 @@ def ger_mulher():
         sobrenome_resul = sobrenome[sobrenome_numero].title()
 
 # SORTEIA UMA CIDADE
-        arquivo_list_cidades = open('_listas/list_cidades_rs.txt', 'r')
+        arquivo_list_cidades = open('_listas/list_cidades_rs.txt', 'r',encoding="utf8" )
         cidade = []
         for cidade_linha in arquivo_list_cidades:
             cidade_linha = cidade_linha.strip()
@@ -129,7 +129,7 @@ def ger_mulher():
         senha_resul = ano + nome_result + '@' + gera_senha
 
 #E-MAIL
-        arquivo_email = open('_listas/list_e-mail.txt', 'r')
+        arquivo_email = open('_listas/list_e-mail.txt', 'r', encoding="utf8")
         email = []
         for email_linha in arquivo_email:
             email_linha = email_linha.strip()
@@ -141,7 +141,7 @@ def ger_mulher():
             email_link_result = link_email + email_email.replace(" ", "")  # link do email
 
 # GERADOR DE BIOS PARA INSTAGRAM E TWITTER
-        arquivo_list_bio = open('_listas/list_bio.txt', 'r')
+        arquivo_list_bio = open('_listas/list_bio.txt', 'r', encoding="utf8")
         bio = []
         for bio_linha in arquivo_list_bio:
             bio_linha = bio_linha.strip()
@@ -170,4 +170,3 @@ def ger_fotos():
        [] Cor do cabelo
        [] Sexo
     ''')
-
