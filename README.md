@@ -1,4 +1,6 @@
 # GERADOR DE PESSOAS
+O anonimato em redes sociais é um direito de todo Brasileiro, visando a não utilização de dados de pessoas reais, criei esse script simples em Python que gera alguns dados.
+
 O script gera dados para perfis em redes sociais.
 
 Módulos adicionados:
@@ -30,5 +32,4 @@ cd gerador_de_pessoas
 pip install -r requirements.txt
 python index.py
 ```
-
 
